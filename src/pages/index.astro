@@ -3,13 +3,13 @@ import PageLayout from "@/layouts/Base";
 import profile from "../../public/profile.jpeg";
 import { Image } from "astro:assets";
 
-const yearsOfExperience = new Date().getFullYear() - 2014;
+const yearsOfExperience = new Date().getFullYear() - 2009;
 ---
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
 		<h1 class="title">Jayden Harrod</h1>
-		<h2 class="text">Senior Software Developer</h2>
+		<h2 class="text">Australian Technologist</h2>
 		<div class="flex gap-8">
 			<Image
 				class="h-24 w-24 -rotate-2 rounded-lg border-2 border-neutral-200 p-2 shadow-lg transition-transform hover:-rotate-0 hover:scale-105 dark:border-neutral-800 dark:bg-neutral-900"
@@ -17,9 +17,16 @@ const yearsOfExperience = new Date().getFullYear() - 2014;
 				alt="Profile Image"
 			/>
 			<p class="text">
-				I'm an Australian software engineer with {yearsOfExperience} years of experience. Whilst fullstack,
-				I have a heavy specialisation towards the frontend utilising the ReactJS eco-system. I've worked
-				for several award winning aussie startups including hipages, Camplify, Digivizer, and BetMakers.
+				I'm an Australian technologist with strong foundations in web development, infrastructure, operations, and product-led growth. 
+				<br />
+				<br />
+				I've been scaling brands, technologies, products, and teams for {yearsOfExperience} years and I have had the privilege of working with some of Australia's most innovative startups and scaleups; including ASX:HPG hipages, ASX:BET BetMakers, ASX:CHL Camplify, ASX:NIB nib, Covidence, Digivizer, and Allie Clinics. And global companies such as Microsoft, Intel, and Lenovo.
+				<br />
+				<br />
+				I have a unique blend of skills to own end-to-end technology operations. Spanning software engineering, infrastructure, product management, and team leadership. I've always seen programming as a tool to solve business problems and create scalable value, and I thrive in environments where systems are vital to success.
+				<br />
+				<br />
+				Some of my roles have included Software Engineer, Technical Lead, Engineering Manager, Head of Engineering, and Product Manager. 
 			</p>
 		</div>
 		<!-- <div>
