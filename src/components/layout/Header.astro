@@ -31,7 +31,7 @@ const url = new URL(Astro.request.url);
 
 <header
   id="main-header"
-  class="group relative mt-0 sm:mt-6 mb-6 sm:mb-14 md:-mx-6 pl-6 pr-6 flex items-center justify-between bg-white/75 dark:bg-neutral-900/75 pb-3 sm:rounded-xl rounded-none border border-gray-200 dark:border-neutral-800 shadow-sm"
+  class="group relative mt-0 sm:mt-6 mb-6 sm:mb-14 md:-mx-6 pl-4 pr-6 flex items-center justify-between bg-white/75 dark:bg-neutral-900/75 pb-3 sm:rounded-xl rounded-none border border-gray-200 dark:border-neutral-800 shadow-sm"
   transition:persist
 >
   <ThemeToggle />
@@ -44,7 +44,7 @@ const url = new URL(Astro.request.url);
       MENU_LINKS.map((link) => (
         <a
           href={link.path}
-          class="px-8 py-4 mt-2 leading-none text-neutral-500 dark:text-neutral-400 no-underline hover:text-neutral-500 dark:hover:text-neutral-300 sm:px-4 sm:py-0"
+          class="px-8 py-4 sm:mt-2 leading-none text-neutral-500 dark:text-neutral-400 no-underline hover:text-neutral-500 dark:hover:text-neutral-300 sm:px-4 sm:py-0"
           aria-current={url.pathname === link.path ? "page" : false}
           rel="prefetch"
         >
