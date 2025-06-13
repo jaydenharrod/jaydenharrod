@@ -17,20 +17,20 @@ import aboutBackground from "../../public/about-bg.png";
 
 <PageLayout meta={{ title: "About" }}>
   <section
-    class="relative overflow-hidden mx-auto text-center pb-16 transition hover:filter-none dark:hover:grayscale-0 dark:grayscale"
+    class="relative -mt-6 overflow-hidden mx-auto text-center sm:pb-8 transition hover:filter-none dark:hover:grayscale-0 dark:grayscale"
   >
     <div class="relative cursor-crosshair h-[320px]">
       <div
-        class="absolute inset-0 rounded-xl shadow-md border dark:border-neutral-600 border-neutral-200"
+        class="absolute inset-0 sm:rounded-xl rounded-none shadow-md border dark:border-neutral-600 border-neutral-200"
       >
         <img
           src={aboutBackground.src}
           alt="Hero Background"
-          class="h-full w-full object-cover cursor-grab rounded-xl"
+          class="h-full w-full object-cover cursor-grab sm:rounded-xl rounded-none"
         />
 
         <div
-          class="absolute inset-0 rounded-xl dark:bg-black/40 bg-gradient-to-b from-sky-900/40 to-yellow-700/40"
+          class="absolute inset-0 sm:rounded-xl rounded-none dark:bg-black/40 bg-gradient-to-b from-sky-900/40 to-yellow-700/40"
         >
         </div>
       </div>

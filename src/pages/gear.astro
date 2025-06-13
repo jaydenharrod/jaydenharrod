@@ -2,65 +2,71 @@
 import PageLayout from "@/layouts/Base";
 ---
 
-<PageLayout meta={{ title: "About" }}>
-	<section>
-		<h1 class="title">Gear</h1>
-		<h2 class="text">What makes a productive environment</h2>
-		<ul>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Chair:</span>
-				<span>
-					<a class="cactus-link" href="/">Steelcase Leap 2</a>
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Desk:</span>
-				<span>
-					<a class="cactus-link" href="/">Omnidesk</a>
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Monitor:</span>
-				<span>
-					<a class="cactus-link" href="/">Apple Studio Display</a>
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Laptop:</span>
-				<span>
-					<a class="cactus-link" href="/">M1 Macbook Pro 14</a>
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Keyboard:</span>
-				<span>
-					<a class="cactus-link" href="/">Logitech MK950</a>
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Mouse:</span>
-				<span>
-					<a class="cactus-link" href="/">Logitech MX Master 3</a>
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Camera:</span>
-				<span>
-					<a class="cactus-link" href="/">Sony A7C | G Master Lenses</a>
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Speakers:</span>
-				<span>
-					<a class="cactus-link" href="/">PreSonus Eris Studio 5</a>
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Headphones:</span>
-				<span>
-					<a class="cactus-link" href="/">Sennheiser HD650</a>
-				</span>
-			</li>
-		</ul>
-	</section>
+<PageLayout
+  meta={{
+    title: "Gear",
+    description:
+      "Explore the gear that enhances my productivity and creativity.",
+  }}
+>
+  <section class="ml-8 sm:ml-8">
+    <h1 class="title">Gear</h1>
+    <h2 class="text">What makes a productive environment</h2>
+    <ul class="space-y-10 md:space-y-2">
+      <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+        <span class="min-w-[120px] text-gray-500">Chair:</span>
+        <span>
+          <a class="cactus-link" href="/">Steelcase Leap 2</a>
+        </span>
+      </li>
+      <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+        <span class="min-w-[120px] text-gray-500">Desk:</span>
+        <span>
+          <a class="cactus-link" href="/">Omnidesk</a>
+        </span>
+      </li>
+      <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+        <span class="min-w-[120px] text-gray-500">Monitor:</span>
+        <span>
+          <a class="cactus-link" href="/">Apple Studio Display</a>
+        </span>
+      </li>
+      <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+        <span class="min-w-[120px] text-gray-500">Laptop:</span>
+        <span>
+          <a class="cactus-link" href="/">M1 Macbook Pro 14</a>
+        </span>
+      </li>
+      <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+        <span class="min-w-[120px] text-gray-500">Keyboard:</span>
+        <span>
+          <a class="cactus-link" href="/">Logitech MK950</a>
+        </span>
+      </li>
+      <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+        <span class="min-w-[120px] text-gray-500">Mouse:</span>
+        <span>
+          <a class="cactus-link" href="/">Logitech MX Master 3</a>
+        </span>
+      </li>
+      <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+        <span class="min-w-[120px] text-gray-500">Camera:</span>
+        <span>
+          <a class="cactus-link" href="/">Sony A7C | G Master Lenses</a>
+        </span>
+      </li>
+      <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+        <span class="min-w-[120px] text-gray-500">Speakers:</span>
+        <span>
+          <a class="cactus-link" href="/">PreSonus Eris Studio 5</a>
+        </span>
+      </li>
+      <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+        <span class="min-w-[120px] text-gray-500">Headphones:</span>
+        <span>
+          <a class="cactus-link" href="/">Sennheiser HD650</a>
+        </span>
+      </li>
+    </ul>
+  </section>
 </PageLayout>

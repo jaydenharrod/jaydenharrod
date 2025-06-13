@@ -31,13 +31,13 @@ const url = new URL(Astro.request.url);
 
 <header
   id="main-header"
-  class="group relative mb-6 sm:mb-20 -mx-6 pl-3 pr-3 flex items-center justify-between bg-white/75 dark:bg-neutral-900/75 pb-3 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-sm"
+  class="group relative mt-0 sm:mt-6 mb-6 sm:mb-14 md:-mx-6 pl-6 pr-6 flex items-center justify-between bg-white/75 dark:bg-neutral-900/75 pb-3 sm:rounded-xl rounded-none border border-gray-200 dark:border-neutral-800 shadow-sm"
   transition:persist
 >
   <ThemeToggle />
   <nav
     id="navigation-menu"
-    class="absolute -inset-x-4 top-14 hidden flex-col items-start gap-y-4 rounded-md bg-[--theme-menu-bg] py-4 text-xl shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:ml-4 sm:mt-1 sm:flex sm:flex-row sm:items-center sm:items-baseline sm:bg-transparent sm:py-0 sm:text-base sm:text-inherit sm:shadow-none sm:backdrop-blur-none"
+    class="absolute -inset-x-4 top-[54px] hidden sm:border-b-0 border-b-2 dark:border-b-0 flex-col items-start gap-y-4 bg-[--theme-menu-bg] py-4 text-xl backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:ml-4 sm:mt-1 sm:flex sm:flex-row sm:items-center sm:items-baseline sm:bg-transparent sm:py-0 sm:text-base sm:text-inherit sm:shadow-none sm:backdrop-blur-none"
     aria-label="Main menu"
   >
     {
@@ -55,7 +55,7 @@ const url = new URL(Astro.request.url);
   </nav>
   <button
     id="toggle-navigation-menu"
-    class="group relative ms-2 h-10 w-10 top-2 rounded-md p-2 transition-all hover:ring-2 sm:invisible sm:ms-4 sm:hidden"
+    class="group relative ms-2 h-10 w-10 top-[6px] transition-all sm:invisible sm:hidden"
     type="button"
     aria-label="Open main menu"
     aria-expanded="false"

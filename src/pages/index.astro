@@ -14,20 +14,20 @@ import { SOCIAL_LINKS } from "../data/constants";
   meta={{ title: "Jayden Harrod", description: "Product & Engineering" }}
 >
   <section
-    class="relative overflow-hidden mx-auto text-center transition hover:filter-none dark:hover:grayscale-0 dark:grayscale"
+    class="relative -mt-6 overflow-hidden mx-auto text-center sm:pb-8 transition hover:filter-none dark:hover:grayscale-0 dark:grayscale"
   >
     <div class="relative cursor-crosshair h-[320px]">
       <div
-        class="absolute inset-0 rounded-xl shadow-md border dark:border-neutral-600 border-neutral-200"
+        class="absolute inset-0 sm:rounded-xl rounded-none shadow-md border dark:border-neutral-600 border-neutral-200"
       >
         <img
           src={heroBackground.src}
           alt="Hero Background"
-          class="h-full w-full object-cover rounded-xl"
+          class="h-full w-full object-cover sm:rounded-xl rounded-none"
         />
 
         <div
-          class="absolute inset-0 rounded-xl bg-neutral-900/30 bg-gradient-to-b from-blue-600/40 to-orange-800/50"
+          class="absolute inset-0 sm:rounded-xl rounded-none bg-neutral-900/30 bg-gradient-to-b from-blue-600/40 to-orange-800/50"
         >
         </div>
       </div>
@@ -47,30 +47,32 @@ import { SOCIAL_LINKS } from "../data/constants";
         </h2>
       </div>
     </div>
-    <div class="mt-16 mb-20 flex flex-wrap items-center justify-center gap-8">
+    <div
+      class="mt-16 mb-20 ml-2 mr-2 flex flex-wrap items-center justify-center gap-8"
+    >
       <img
         src={hipagesLogo.src}
-        alt="Company 3"
+        alt="hipages"
         class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
       />
       <img
         src={covidenceLogo.src}
-        alt="Company 4"
+        alt="Covidence"
         class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
       />
       <img
         src={betmakersLogo.src}
-        alt="Company 2"
+        alt="BetMakers"
         class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
       />
       <img
         src={camplifyLogo.src}
-        alt="Company 1"
+        alt="Camplify"
         class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
       />
       <img
         src={digivizerLogo.src}
-        alt="Company 4"
+        alt="Digivizer"
         class="h-14 dark:grayscale dark:opacity-25 opacity-90 dark:hover:opacity-30"
       />
     </div>
@@ -94,7 +96,7 @@ import { SOCIAL_LINKS } from "../data/constants";
     </div>
   </section>
 
-  <section class="mt-20 grid grid-cols-1 gap-12 md:grid-cols-2">
+  <section class="mt-24 grid grid-cols-1 gap-12 md:grid-cols-2">
     <div
       class="rounded-xl border bg-white dark:bg-neutral-950 border-neutral-200 p-8 dark:border-neutral-800"
     >

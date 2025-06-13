@@ -3,22 +3,27 @@ import PageLayout from "@/layouts/Base";
 import projectBackground from "../../public/project-bg.png";
 ---
 
-<PageLayout meta={{ title: "About" }}>
+<PageLayout
+  meta={{
+    title: "Projects",
+    description: "Explore my personal projects and professional endeavors.",
+  }}
+>
   <section
-    class="relative overflow-hidden mx-auto text-center pb-16 transition hover:filter-none dark:hover:grayscale-0 dark:grayscale"
+    class="relative -mt-6 overflow-hidden mx-auto text-center sm:pb-8 transition hover:filter-none dark:hover:grayscale-0 dark:grayscale"
   >
     <div class="relative cursor-crosshair h-[320px]">
       <div
-        class="absolute inset-0 rounded-xl shadow-md border dark:border-neutral-600 border-neutral-200"
+        class="absolute inset-0 sm:rounded-xl rounded-none shadow-md border dark:border-neutral-600 border-neutral-200"
       >
         <img
           src={projectBackground.src}
           alt="Hero Background"
-          class="h-full w-full object-cover rounded-xl"
+          class="h-full w-full object-cover sm:rounded-xl rounded-none"
         />
 
         <div
-          class="absolute inset-0 rounded-xl dark:bg-black/40 bg-gradient-to-b from-sky-600/40 to-orange-800/50"
+          class="absolute inset-0 sm:rounded-xl rounded-none dark:bg-black/40 bg-gradient-to-b from-sky-600/40 to-orange-800/50"
         >
         </div>
       </div>
@@ -39,85 +44,83 @@ import projectBackground from "../../public/project-bg.png";
       </div>
     </div>
   </section>
-  <section class="grid gap-8">
-    <div class="grid gap-8 md:grid-cols-2">
-      <article
-        class="group relative flex flex-col p-6 rounded-2xl bg-white dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700"
-      >
-        <div class="flex items-center gap-4 mb-4">
-          <div
-            class="h-12 w-12 rounded-full bg-neutral-100 dark:bg-neutral-700/30 flex items-center justify-center dark:grayscale"
-          >
-            📡
-          </div>
-          <h3
-            class="text-xl font-semibold text-neutral-900 dark:text-neutral-300"
-          >
-            TelemetryWorks
-          </h3>
-        </div>
-        <p class="text-neutral-600 dark:text-neutral-500 mb-4">
-          R&D technology solutions for modern field based work challenges.
-        </p>
-        <a
-          href="https://telemetryworks.com/"
-          class="inline-flex items-center mt-auto text-sky-800 dark:text-neutral-400 hover:underline"
+  <section class="grid sm:gap-8 md:grid-cols-2">
+    <article
+      class="group relative flex flex-col p-6 rounded-none sm:rounded-2xl bg-white dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700"
+    >
+      <div class="flex items-center gap-4 mb-4">
+        <div
+          class="h-12 w-12 rounded-full bg-neutral-100 dark:bg-neutral-700/30 flex items-center justify-center dark:grayscale"
         >
-          Visit Project
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 ml-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
-        </a>
-      </article>
+          📡
+        </div>
+        <h3
+          class="text-xl font-semibold text-neutral-900 dark:text-neutral-300"
+        >
+          TelemetryWorks
+        </h3>
+      </div>
+      <p class="text-neutral-600 dark:text-neutral-500 mb-4">
+        R&D technology solutions for modern field based work challenges.
+      </p>
+      <a
+        href="https://telemetryworks.com/"
+        class="inline-flex items-center mt-auto text-sky-800 dark:text-neutral-400 hover:underline"
+      >
+        Visit Project
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 ml-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </article>
 
-      <article
-        class="group relative flex flex-col p-6 rounded-2xl bg-white dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700"
-      >
-        <div class="flex items-center gap-4 mb-4">
-          <div
-            class="h-12 w-12 rounded-full bg-neutral-100 dark:bg-neutral-700/30 flex items-center justify-center dark:grayscale"
-          >
-            📍
-          </div>
-          <h3
-            class="text-xl font-semibold text-neutral-900 dark:text-neutral-300"
-          >
-            Northshed
-          </h3>
-        </div>
-        <p class="text-neutral-600 dark:text-neutral-500 mb-4">
-          Professional drone-based aerial mapping and reporting services.
-        </p>
-        <a
-          href="https://northshed.com.au/"
-          class="inline-flex items-center mt-auto text-orange-800 dark:text-neutral-400 hover:underline"
+    <article
+      class="group relative flex flex-col p-6 rounded-none sm:rounded-2xl bg-white dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700"
+    >
+      <div class="flex items-center gap-4 mb-4">
+        <div
+          class="h-12 w-12 rounded-full bg-neutral-100 dark:bg-neutral-700/30 flex items-center justify-center dark:grayscale"
         >
-          Visit Project
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 ml-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
-        </a>
-      </article>
-    </div>
+          📍
+        </div>
+        <h3
+          class="text-xl font-semibold text-neutral-900 dark:text-neutral-300"
+        >
+          Northshed
+        </h3>
+      </div>
+      <p class="text-neutral-600 dark:text-neutral-500 mb-4">
+        Professional drone-based aerial mapping and reporting services.
+      </p>
+      <a
+        href="https://northshed.com.au/"
+        class="inline-flex items-center mt-auto text-orange-800 dark:text-neutral-400 hover:underline"
+      >
+        Visit Project
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 ml-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </article>
   </section>
 </PageLayout>
