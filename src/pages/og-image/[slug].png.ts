@@ -72,7 +72,10 @@ export async function get({ params: { slug } }: APIContext) {
 		weekday: "long",
 		month: "long",
 	});
-	const svg = await satori(markup(title, postDate) as React.ReactNode, ogOptions);
+	const svg = await satori(
+		markup(title, postDate) as React.ReactNode,
+		ogOptions,
+	);
 	const png = new Resvg(svg).render().asPng();
 	return {
 		body: png,
@@ -82,5 +85,7 @@ export async function get({ params: { slug } }: APIContext) {
 
 export const getStaticPaths = (async () => {
 	const posts = await getCollection("post");
-	return posts.filter(({ data }) => !data.ogImage).map(({ slug }) => ({ params: { slug } }));
+	return posts
+		.filter(({ data }) => !data.ogImage)
+		.map(({ slug }) => ({ params: { slug } }));
 }) satisfies GetStaticPaths;

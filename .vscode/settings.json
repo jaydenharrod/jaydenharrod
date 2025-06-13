@@ -1,5 +1,6 @@
 {
 	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "explicit"
 	},
@@ -9,14 +10,6 @@
 			"source.fixAll.markdownlint": "explicit"
 		}
 	},
-	"prettier.documentSelectors": ["**/*.astro"],
-	"eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		"astro", // Enable .astro
-		"typescript", // Enable .ts
-		"typescriptreact"
-	],
 	"files.exclude": {
 		"**/.git": true,
 		"**/.svn": true,
