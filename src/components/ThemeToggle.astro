@@ -1,55 +1,59 @@
 <script>
-	class ThemeToggle extends HTMLElement {
-		constructor() {
-			super();
-			const button = this.querySelector("button") as HTMLButtonElement;
+  class ThemeToggle extends HTMLElement {
+    constructor() {
+      super();
+      const button = this.querySelector("button") as HTMLButtonElement;
 
-			if (button) {
-				// button clicked, fire event
-				button.addEventListener("click", (e) => {
-					if (e.currentTarget instanceof HTMLButtonElement) {
-						// isPressed === dark mode current on
-						let isPressed = e.currentTarget.getAttribute("aria-pressed") === "true";
+      if (button) {
+        // button clicked, fire event
+        button.addEventListener("click", (e) => {
+          if (e.currentTarget instanceof HTMLButtonElement) {
+            // isPressed === dark mode current on
+            let isPressed =
+              e.currentTarget.getAttribute("aria-pressed") === "true";
 
-						// invert isPressed
-						let themeChangeEvent = new CustomEvent("theme-change", {
-							detail: {
-								theme: isPressed ? "light" : "dark",
-							},
-						});
-						// dispatch event -> ThemeProvider.astro
-						document.dispatchEvent(themeChangeEvent);
-						// toggle the aria-pressed attribute
-						button.setAttribute("aria-pressed", String(!isPressed));
-					}
-				});
-			}
-		}
-	}
+            // invert isPressed
+            let themeChangeEvent = new CustomEvent("theme-change", {
+              detail: {
+                theme: isPressed ? "light" : "dark",
+              },
+            });
+            // dispatch event -> ThemeProvider.astro
+            document.dispatchEvent(themeChangeEvent);
+            // toggle the aria-pressed attribute
+            button.setAttribute("aria-pressed", String(!isPressed));
+          }
+        });
+      }
+    }
+  }
 
-	customElements.define("theme-toggle", ThemeToggle);
+  customElements.define("theme-toggle", ThemeToggle);
 </script>
 
 <theme-toggle class="ms-2 sm:ms-4">
-	<button
-		type="button"
-		id="toggle-theme"
-		class="relative flex transform items-center transition-transform hover:scale-125"
-		aria-label="Toggle Dark Mode"
-	>
-		<svg class="h-10 w-6">
-			<g id="SvgjsG1292" transform="matrix(2, 0, 0, 2, 0, 0)" fill="var(--theme-accent)"
-				><path
-					d="M3.66 7.76 l3 0 l0 7.24 c0 3.14 -2.44 5.1 -5.4 5.1 c-0.22 0 -0.4 0 -0.5 -0.02 s-0.24 -0.06 -0.38 -0.08 l0 -2.78 c0.26 0.06 0.54 0.1 0.8 0.1 c1.54 0 2.48 -0.72 2.48 -2.32 l0 -7.24 z"
-				></path></g
-			>
-		</svg>
-	</button>
+  <button
+    type="button"
+    id="toggle-theme"
+    class="relative flex transform items-center transition-transform hover:-rotate-12"
+    aria-label="Toggle Dark Mode"
+  >
+    <svg class="h-10 w-6">
+      <g
+        id="SvgjsG1292"
+        transform="matrix(2, 0, 0, 2, 0, 0)"
+        fill="var(--theme-accent)"
+        ><path
+          d="M3.66 7.76 l3 0 l0 7.24 c0 3.14 -2.44 5.1 -5.4 5.1 c-0.22 0 -0.4 0 -0.5 -0.02 s-0.24 -0.06 -0.38 -0.08 l0 -2.78 c0.26 0.06 0.54 0.1 0.8 0.1 c1.54 0 2.48 -0.72 2.48 -2.32 l0 -7.24 z"
+        ></path></g
+      >
+    </svg>
+  </button>
 </theme-toggle>
 
 {/* Inlined to avoid FOUC. */}
 <script is:inline>
-	const bodyThemeIsDark = document.documentElement.classList.contains("dark");
-	const button = document.getElementById("toggle-theme");
-	button.setAttribute("aria-pressed", String(bodyThemeIsDark));
+  const bodyThemeIsDark = document.documentElement.classList.contains("dark");
+  const button = document.getElementById("toggle-theme");
+  button.setAttribute("aria-pressed", String(bodyThemeIsDark));
 </script>

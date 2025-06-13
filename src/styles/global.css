@@ -5,9 +5,9 @@
 		color-scheme: light;
 		--theme-bg: #eeeff1;
 		--theme-link: #444d44;
-		--theme-text: #444d44;
+		--theme-text: #565f5e;
 		--theme-accent: #444d44;
-		--theme-accent-2: #444d44;
+		--theme-accent-2: #4a514f;
 		--theme-quote: #2c3e2d;
 		--theme-menu-bg: hsl(0, 0%, 100%);
 		--theme-quote: 351deg 66% 48%;
@@ -17,20 +17,20 @@
 		color-scheme: dark;
 		--theme-bg: #111112;
 		--theme-link: #707384;
-		--theme-text: #707384;
+		--theme-text: #838383;
 		--theme-accent: #bec2cd;
-		--theme-accent-2: #bec2cd;
+		--theme-accent-2: #b5b5b5;
 		--theme-quote: #dadada;
 		--theme-menu-bg: rgb(29 31 33 / 0.85);
 		--theme-quote: 102deg 100% 86%;
 	}
 
 	html {
-		@apply h-full scroll-smooth border-t-2 border-textColor;
+		@apply h-full scroll-smooth overflow-y-scroll;
 	}
 
 	html body {
-		@apply mx-auto flex h-full max-w-3xl flex-col bg-bgColor px-8 pt-16 font-sans text-base font-normal text-textColor antialiased;
+		@apply mx-auto flex h-full max-w-3xl flex-col bg-bgColor px-8 pt-4 font-sans text-base font-normal text-textColor antialiased;
 	}
 }
 

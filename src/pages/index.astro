@@ -1,28 +1,93 @@
 ---
 import PageLayout from "@/layouts/Base";
-import profile from "../../public/profile.jpeg";
 import { Image } from "astro:assets";
+import profile from "../../public/profile.jpeg";
+import heroBackground from "../../public/hero-bg.png";
+import chlLogo from "../../public/chl-logo.png";
+import betmakersLogo from "../../public/betmakers-logo.png";
+import hipagesLogo from "../../public/hipages-logo.png";
+import covidenceLogo from "../../public/covidence-logo.png";
+import digivizerLogo from "../../public/digivizer-logo.png";
 ---
 
-<PageLayout meta={{ title: "Home" }}>
+<PageLayout
+  meta={{ title: "Jayden Harrod", description: "Product & Engineering" }}
+>
+  <section
+    class="relative overflow-hidden mx-auto text-center transition hover:filter-none dark:hover:grayscale-0 dark:grayscale"
+  >
+    <div class="relative cursor-crosshair h-[320px]">
+      <div
+        class="absolute inset-0 rounded-xl shadow-md border dark:border-neutral-600 border-neutral-200"
+      >
+        <img
+          src={heroBackground.src}
+          alt="Hero Background"
+          class="h-full w-full object-cover rounded-xl"
+        />
+
+        <div
+          class="absolute inset-0 rounded-xl dark:bg-black/40 bg-gradient-to-b from-blue-700/30 to-orange-700/40"
+        >
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-full px-4"
+      >
+        <h1
+          class="title text-6xl font-extrabold dark:text-neutral-100/80 text-neutral-100 mb-4"
+        >
+          Jayden Harrod
+        </h1>
+        <h2
+          class="mb-8 text-3xl font-medium text-neutral-100 dark:text-neutral-100/80"
+        >
+          Building Great Products
+        </h2>
+      </div>
+    </div>
+    <div class="mt-16 mb-20 flex flex-wrap items-center justify-center gap-8">
+      <img
+        src={hipagesLogo.src}
+        alt="Company 3"
+        class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
+      />
+      <img
+        src={covidenceLogo.src}
+        alt="Company 4"
+        class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
+      />
+      <img
+        src={betmakersLogo.src}
+        alt="Company 2"
+        class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
+      />
+      <img
+        src={chlLogo.src}
+        alt="Company 1"
+        class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
+      />
+      <img
+        src={digivizerLogo.src}
+        alt="Company 4"
+        class="h-14 dark:grayscale dark:opacity-25 opacity-90 dark:hover:opacity-30"
+      />
+    </div>
+  </section>
+
   <section>
-    <h1 class="title">Jayden Harrod</h1>
-    <h2 class="text">Australian Technologist</h2>
-    <div class="flex gap-8">
+    <div class="flex gap-14">
       <Image
-        class="h-24 w-24 -rotate-2 rounded-lg border-2 border-neutral-200 p-2 shadow-lg transition-transform hover:-rotate-0 hover:scale-105 dark:border-neutral-800 dark:bg-neutral-900"
+        class="h-40 w-40 cursor-pointer dark:hover:grayscale-0 dark:grayscale -rotate-2 rounded-lg border-2 dark:opacity-75 border-neutral-200 p-2 shadow-lg transition-transform hover:-rotate-0 hover:scale-105 dark:border-neutral-800 dark:bg-neutral-900"
         src={profile}
         alt="Profile Image"
       />
-      <p class="text">
-        I'm a technical operator who's helped scale multiple product companies
-        to $50M+ ARR — from the ground up. I've led during moments of chaos,
-        M&A, and rapid growth to deliver meaningful outcomes across engineering,
-        infrastructure, teams, and compliance.
-        <br />
-        <br />
-         My roles have included Designer, Software Engineer, Technical Lead,
-        Engineering Manager, Product Manager, and Head of Engineering.
+      <p class="text opacity-80 pt-2">
+        Hey! I'm a technical operator who's helped scale multiple product
+        companies to $50M+ ARR from the ground up. I've operated during moments
+        of chaos, M&A, and rapid growth to deliver meaningful outcomes across
+        engineering, infrastructure, compliance, teams, and product.
       </p>
     </div>
   </section>

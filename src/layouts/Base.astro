@@ -9,27 +9,33 @@ import { siteConfig } from "@/site-config";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-	meta: SiteMeta;
+  meta: SiteMeta;
 }
 
 const {
-	meta: { title, description = siteConfig.description, ogImage, articleDate },
+  meta: { title, description = siteConfig.description, ogImage, articleDate },
 } = Astro.props;
 ---
 
 <html lang={siteConfig.lang}>
-	<head>
-		<BaseHead title={title} description={description} ogImage={ogImage} articleDate={articleDate} />
-		<ViewTransitions />
-		<script is:inline data-domain="jayden.gg" src="https://plausible.io/js/script.js"></script>
-	</head>
-	<body>
-		<ThemeProvider />
-		<SkipLink />
-		<Header />
-		<main id="main" class="pb-18 flex-20 rounded-xl bg-white p-6 shadow-sm dark:bg-neutral-900">
-			<slot />
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      ogImage={ogImage}
+      articleDate={articleDate}
+    />
+    <ViewTransitions />
+  </head>
+  <body
+    class="bg-white dark:bg-neutral-950 bg-[size:40px_40px] [background-image:linear-gradient(to_right,rgb(229_231_235/_0.3)_1px,transparent_1px),linear-gradient(to_bottom,rgb(229_231_235/_0.3)_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,rgb(255_255_255/_0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/_0.02)_1px,transparent_1px)]"
+  >
+    <ThemeProvider />
+    <SkipLink />
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body><!-- class="pb-18 flex-20 rounded-xl bg-white p-6 shadow-sm dark:bg-neutral-900" -->
 </html>

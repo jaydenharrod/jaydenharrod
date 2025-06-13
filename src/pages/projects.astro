@@ -1,24 +1,66 @@
 ---
 import PageLayout from "@/layouts/Base";
+import projectBackground from "../../public/project-bg.png";
 ---
 
 <PageLayout meta={{ title: "About" }}>
-	<section>
-		<h1 class="title">Projects</h1>
-		<h2 class="text">A series of personal endeavours</h2>
-		<ul>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">R&D field-based technology:</span>
-				<span>
-					<a class="cactus-link" href="https://telemetryworks.com/">TelemetryWorks</a>
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Drone based aerial mapping:</span>
-				<span>
-					<a class="cactus-link" href="https://northshed.com.au/">Northshed Aerial Solutions</a>
-				</span>
-			</li>
-		</ul>
-	</section>
+  <section
+    class="relative overflow-hidden mx-auto text-center pb-16 transition hover:filter-none dark:hover:grayscale-0 dark:grayscale"
+  >
+    <div class="relative cursor-crosshair h-[320px]">
+      <div
+        class="absolute inset-0 rounded-xl shadow-md border dark:border-neutral-600 border-neutral-200"
+      >
+        <img
+          src={projectBackground.src}
+          alt="Hero Background"
+          class="h-full w-full object-cover rounded-xl"
+        />
+
+        <div
+          class="absolute inset-0 rounded-xl dark:bg-black/40 bg-gradient-to-b from-blue-700/30 to-orange-700/40"
+        >
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-full px-4"
+      >
+        <h1
+          class="title text-6xl font-extrabold dark:text-neutral-100/80 text-neutral-100 mb-4"
+        >
+          Projects
+        </h1>
+        <h2
+          class="mb-8 text-3xl font-medium text-neutral-100 dark:text-neutral-100/80"
+        >
+          Personal Endeavours
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section>
+    <ul>
+      <li class="flex flex-col gap-x-2 sm:flex-row items-center">
+        <span class="min-w-[120px] text-gray-500"
+          >R&D field-based technology:</span
+        >
+        <span>
+          <a class="cactus-link" href="https://telemetryworks.com/"
+            >TelemetryWorks</a
+          >
+        </span>
+      </li>
+      <li class="flex flex-col gap-x-2 sm:flex-row items-center">
+        <span class="min-w-[120px] text-gray-500"
+          >Drone based aerial mapping:</span
+        >
+        <span>
+          <a class="cactus-link" href="https://northshed.com.au/"
+            >Northshed Aerial Solutions</a
+          >
+        </span>
+      </li>
+    </ul>
+  </section>
 </PageLayout>

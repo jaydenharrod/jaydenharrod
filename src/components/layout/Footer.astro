@@ -5,14 +5,15 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer
-	class="mt-auto flex w-full max-w-3xl flex-col items-center justify-center gap-y-2 pb-4 pt-20 text-center align-top text-sm text-gray-500 dark:text-gray-400 sm:flex-row sm:items-start sm:justify-between"
+  class="mt-auto mb-8 flex w-full max-w-3xl flex-col items-center justify-center gap-y-2 pt-20 text-center align-top text-sm text-gray-500 dark:text-gray-400 sm:flex-row sm:items-start sm:justify-between"
 >
-	<nav aria-label="Social links">
-		<SocialList />
-	</nav>
-	<div class="mb-16">
-		&copy;{currentYear}&nbsp;<a class="h-card no-underline hover:underline" href="https://jayden.gg"
-			>Jayden Harrod</a
-		>
-	</div>
+  <nav aria-label="Social links">
+    <SocialList />
+  </nav>
+  <div>
+    &copy;{currentYear}&nbsp;<a
+      class="h-card no-underline hover:underline"
+      href="https://jayden.gg">Jayden Harrod</a
+    >
+  </div>
 </footer>

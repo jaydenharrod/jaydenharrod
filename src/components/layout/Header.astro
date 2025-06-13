@@ -5,86 +5,94 @@ const url = new URL(Astro.request.url);
 ---
 
 <script>
-	import { toggleClass } from "@/utils";
-	let headerEl: HTMLElement;
-	let menuButtonEl: HTMLButtonElement;
-	let menuOpen = false;
+  import { toggleClass } from "@/utils";
+  let headerEl: HTMLElement;
+  let menuButtonEl: HTMLButtonElement;
+  let menuOpen = false;
 
-	function toggleMobileMenu() {
-		toggleClass(headerEl, "menu-open");
-		menuOpen = !menuOpen;
-		menuButtonEl.setAttribute("aria-expanded", menuOpen.toString());
-	}
+  function toggleMobileMenu() {
+    toggleClass(headerEl, "menu-open");
+    menuOpen = !menuOpen;
+    menuButtonEl.setAttribute("aria-expanded", menuOpen.toString());
+  }
 
-	document.addEventListener("DOMContentLoaded", () => {
-		headerEl = document.getElementById("main-header")!;
-		menuButtonEl = document.getElementById("toggle-navigation-menu") as HTMLButtonElement;
-		menuButtonEl.addEventListener("click", toggleMobileMenu);
-	});
+  document.addEventListener("DOMContentLoaded", () => {
+    headerEl = document.getElementById("main-header")!;
+    menuButtonEl = document.getElementById(
+      "toggle-navigation-menu"
+    ) as HTMLButtonElement;
+    menuButtonEl.addEventListener("click", toggleMobileMenu);
+  });
 
-	document.addEventListener("astro:after-swap", () => {
-		if (menuOpen) toggleMobileMenu();
-	});
+  document.addEventListener("astro:after-swap", () => {
+    if (menuOpen) toggleMobileMenu();
+  });
 </script>
 
 <header
-	id="main-header"
-	class="group relative mb-20 flex items-center justify-between"
-	transition:persist
+  id="main-header"
+  class="group relative mb-6 sm:mb-20 -mx-6 pl-3 pr-3 flex items-center justify-between bg-white/75 dark:bg-neutral-900/75 pb-3 rounded-xl border border-gray-200 dark:border-neutral-800 shadow-sm"
+  transition:persist
 >
-	<ThemeToggle />
-	<nav
-		id="navigation-menu"
-		class="absolute -inset-x-4 top-14 hidden flex-col items-end gap-y-4 rounded-md bg-[--theme-menu-bg] py-4 text-xl shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:ml-4 sm:mt-1 sm:flex sm:flex-row sm:items-center sm:items-baseline sm:bg-transparent sm:py-0 sm:text-base sm:text-inherit sm:shadow-none sm:backdrop-blur-none"
-		aria-label="Main menu"
-	>
-		{
-			MENU_LINKS.map((link) => (
-				<a
-					href={link.path}
-					class="px-8 py-4 leading-none text-accent-2 no-underline hover:underline sm:px-4 sm:py-0"
-					aria-current={url.pathname === link.path ? "page" : false}
-					rel="prefetch"
-				>
-					{link.title}
-				</a>
-			))
-		}
-	</nav>
-	<button
-		id="toggle-navigation-menu"
-		class="group relative ms-2 h-9 w-9 rounded-md p-2 ring-zinc-400 transition-all hover:ring-2 sm:invisible sm:ms-4 sm:hidden"
-		type="button"
-		aria-label="Open main menu"
-		aria-expanded="false"
-		aria-haspopup="menu"
-	>
-		<svg
-			id="line-svg"
-			class="absolute start-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 transition-all group-aria-expanded:scale-0 group-aria-expanded:opacity-0"
-			aria-hidden="true"
-			focusable="false"
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke-width="1.5"
-			stroke="currentColor"
-		>
-			<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5"></path>
-		</svg>
-		<svg
-			id="cross-svg"
-			class="absolute start-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 scale-0 text-accent opacity-0 transition-all group-aria-expanded:scale-100 group-aria-expanded:opacity-100"
-			class="text-accent"
-			aria-hidden="true"
-			focusable="false"
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke-width="1.5"
-			stroke="currentColor"
-		>
-			<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-		</svg>
-	</button>
+  <ThemeToggle />
+  <nav
+    id="navigation-menu"
+    class="absolute -inset-x-4 top-14 hidden flex-col items-start gap-y-4 rounded-md bg-[--theme-menu-bg] py-4 text-xl shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:ml-4 sm:mt-1 sm:flex sm:flex-row sm:items-center sm:items-baseline sm:bg-transparent sm:py-0 sm:text-base sm:text-inherit sm:shadow-none sm:backdrop-blur-none"
+    aria-label="Main menu"
+  >
+    {
+      MENU_LINKS.map((link) => (
+        <a
+          href={link.path}
+          class="px-8 py-4 mt-2 leading-none text-neutral-500 dark:text-neutral-400 no-underline hover:text-neutral-500 dark:hover:text-neutral-300 sm:px-4 sm:py-0"
+          aria-current={url.pathname === link.path ? "page" : false}
+          rel="prefetch"
+        >
+          {link.title}
+        </a>
+      ))
+    }
+  </nav>
+  <button
+    id="toggle-navigation-menu"
+    class="group relative ms-2 h-10 w-10 top-2 rounded-md p-2 transition-all hover:ring-2 sm:invisible sm:ms-4 sm:hidden"
+    type="button"
+    aria-label="Open main menu"
+    aria-expanded="false"
+    aria-haspopup="menu"
+  >
+    <svg
+      id="line-svg"
+      class="absolute start-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 transition-all group-aria-expanded:scale-0 group-aria-expanded:opacity-0"
+      aria-hidden="true"
+      focusable="false"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 9h16.5m-16.5 6.75h16.5"></path>
+    </svg>
+    <svg
+      id="cross-svg"
+      class="absolute start-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 scale-0 text-accent opacity-0 transition-all group-aria-expanded:scale-100 group-aria-expanded:opacity-100"
+      class="text-accent"
+      aria-hidden="true"
+      focusable="false"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
 </header>

@@ -2,132 +2,181 @@
 import PageLayout from "@/layouts/Base";
 import { Image } from "astro:assets";
 import {
-	Javascript,
-	Typescript,
-	Php,
-	Rubyonrails,
-	React,
-	Dotnet,
+  Javascript,
+  Typescript,
+  Php,
+  Rubyonrails,
+  React,
+  Dotnet,
 } from "simple-icons-astro";
 import backpack from "../../public/backpack.jpeg";
 import climbing from "../../public/climbing.jpeg";
 import toastie from "../../public/toastie.jpeg";
+import aboutBackground from "../../public/about-bg.png";
 ---
 
 <PageLayout meta={{ title: "About" }}>
-	<section>
-		<h1 class="title">About</h1>
-		<h2 class="text">A technologist from Australia</h2>
-		<div class="mb-10 flex justify-center gap-4">
-			<div
-				class="-rotate-2 rounded-lg border-2 border-gray-200 px-2 pb-10 pt-2 shadow-lg transition-transform hover:rotate-2 dark:border-neutral-700 dark:bg-neutral-800"
-			>
-				<Image class="h-20 w-20 sm:h-52 sm:w-52" src={backpack} alt="Profile Image" />
-			</div>
-			<div
-				class="rounded-lg border-2 border-gray-200 px-2 pb-10 pt-2 shadow-lg transition-transform hover:-rotate-2 dark:border-neutral-700 dark:bg-neutral-800"
-			>
-				<Image class="h-20 w-20 sm:h-52 sm:w-52" src={climbing} alt="Profile Image" />
-			</div>
-			<div
-				class="rotate-2 rounded-lg border-2 border-gray-200 px-2 pb-10 pt-2 shadow-lg transition-transform hover:-rotate-2 dark:border-neutral-700 dark:bg-neutral-800"
-			>
-				<Image class="h-20 w-20 sm:h-52 sm:w-52" src={toastie} alt="Profile Image" />
-			</div>
-		</div>
-		<p class="text">
-			A multi-disciplinary technologist specialising in scaling software products and teams.
-		</p>
-		<p class="text">
-			My journey begun as a YouTuber (2010) where I focused on mastering the Adobe Creative Suite – gaining skills in videography, photography, visual effects, audio editing, web development, and flash development. It's also where I discovered the importance of branding and marketing, which led me to join my first startup during high school. The company was PickleHosting, a game server and domain hosting company that I did customer support, networking, and operations. I later transitioned into a full-time role as an Operations Manager, where I was responsible for the day-to-day operations of the business. It was my first taste of building products and launching them to market.
-		</p>
-		<p class="text">
-			After leaving PickleHosting, I joined Digivizer as a Digital Designer, where I was responsible for designing and developing web applications. Wanting more freedom to bring my designs to life, I transitioned into a Software Engineer role, where I was able to utilise my design skills to create beautiful and functional web applications using ReactJS. 
-		</p>
-		<p class="text">
-			Now armed with a solid foundation across design, marketing, business ops, and engineering, I joined hipages as a Growth Software Engineer to put my skills to the test. Here I worked on A/B experiments in a data-driven workflow in order to improve SEO, conversion rates, and user experience. This translated to significant growth as the trailblazers for a cross-functional growth team. The biggest impact was converting lengthy quote forms into dynamic multi-step modals improving drop-off rates by 60%.
-		</p>
-		<p class="text">
-			Having grown in my engineering skills, I made a decision to leave Sydney and move regional to Newcastle, Australia. I joined a local agency called Mudbath, where I was able to work on a variety of projects for clients such as nib and the Australian Rail Track Corporation. This role allowed me to further develop my skills in ReactJS, .NET, and architecting codebases from scratch for mission critical applications.
-		</p>
-		<p class="text">
-			An opportunity came up to join a product-based technology startup as a Founding Software Engineer, this company was BetMakers Technology Group. I was responsible for building a new product from the ground up, which was a significant challenge but also a great opportunity to learn and grow. I was able to utilise my skills in ReactJS, PHP, and networking to create complex real-time financial apps whilst also building a team of engineers across a large product portfolio. This was a pivotal moment in my career and allowed me to take on roles such as Lead Software Engineer, DevOps Engineer, Engineering Manager, Product Manager, and Head of Engineering. Conducting in these roles enabled commerical projects that lead to $40M in annual revenue growth which delivered a 1,400% gain for shareholders and investors.
-		</p>
-		<p class="text">
-			Having speed ran building a $1B startup, I decided to take a step back and focus on the role I enjoyed the most, and so, I joined Camplify as an Engineering Manager. Using everything I learned, I was able to refine my leadership and managerial skills, leading a team of designers and engineers to scale a loved domestic marketplace for caravans and campers across 7 countries, 4 languages, and 4 currencies. Where I helped guide and inspire the team with a major M&A project that would double our growth in 12 months.
-		</p>
-		<p class="text">
-			After scaling Camplify's product, I decided to take a step back and reconnect with programming. Taking a hands-on Senior Engineering role at Covidence, a non-profit organisation that builds software to help researchers conduct systematic reviews. Here I was able to utilise my skills in ReactJS, TypeScript, and Ruby on Rails to create a world-class product that is loved by researchers and students around the world.
-		</p>
-	</section>
-	<section aria-label="Pulse" class="mb-2 mt-16">
-		<h2 class="title mb-4 text-xl">Career</h2>
-		<ul class="space-y-4 sm:space-y-2">
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Senior Software Engineer:</span>
-				<span class="flex items-center gap-2">
-					<a class="cactus-link" href="https://covidence.org/">Covidence</a>
-					<Javascript class="h-5 w-5" name="simple-icons:javascript" />
-					<Typescript class="h-5 w-5" name="simple-icons:typescript" />
-					<React class="h-5 w-5" name="simple-icons:react" />
-					<Rubyonrails class="h-5 w-5" name="simple-icons:ruby-on-rails" />
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Product & Engineering Manager:</span>
-				<span class="flex items-center gap-2">
-					<a class="cactus-link" href="https://camplify.com/">Camplify</a>
-					<Javascript class="h-5 w-5" name="simple-icons:javascript" />
-					<Typescript class="h-5 w-5" name="simple-icons:typescript" />
-					<React class="h-5 w-5" name="simple-icons:react" />
-					<Rubyonrails class="h-5 w-5" name="simple-icons:ruby-on-rails" />
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Product & Engineering Lead:</span>
-				<span class="flex items-center gap-2">
-					<a class="cactus-link" href="https://betmakers.com/">Betmakers</a>
-					<Javascript class="h-5 w-5" name="simple-icons:javascript" />
-					<Typescript class="h-5 w-5" name="simple-icons:typescript" />
-					<React class="h-5 w-5" name="simple-icons:react" />
-					<Php class="h-5 w-5" name="simple-icons:php" />
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Senior Software Engineer:</span>
-				<span class="flex items-center gap-2">
-					<a class="cactus-link" href="https://mudbath.com.au/">Mudbath</a>
-					<Javascript class="h-5 w-5" name="simple-icons:javascript" />
-					<Typescript class="h-5 w-5" name="simple-icons:typescript" />
-					<React class="h-5 w-5" name="simple-icons:react" />
-					<Dotnet class="h-5 w-5" name="simple-icons:dot-net" />
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Growth Software Engineer:</span>
-				<span class="flex items-center gap-2">
-					<a class="cactus-link" href="https://hipagesgroup.com.au/">hipages</a>
-					<Javascript class="h-5 w-5" name="simple-icons:javascript" />
-					<Typescript class="h-5 w-5" name="simple-icons:typescript" />
-					<React class="h-5 w-5" name="simple-icons:react" />
-					<Php class="h-5 w-5" name="simple-icons:php" />
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Design Software Engineer:</span>
-				<span class="flex items-center gap-2">
-					<a class="cactus-link" href="https://digivizer.com/">Digivizer</a>
-					<Javascript class="h-5 w-5" name="simple-icons:javascript" />
-					<React class="h-5 w-5" name="simple-icons:react" />
-					<Rubyonrails class="h-5 w-5" name="simple-icons:ruby-on-rails" />
-				</span>
-			</li>
-			<li class="flex flex-col gap-x-2 sm:flex-row items-center">
-				<span class="min-w-[120px] text-gray-500">Operations Manager:</span>
-				<span>
-					<a class="cactus-link" href="/about/">PickleHosting (EXIT)</a>
-				</span>
-			</li>
-		</ul>
-	</section>
+  <section
+    class="relative overflow-hidden mx-auto text-center pb-16 transition hover:filter-none dark:hover:grayscale-0 dark:grayscale"
+  >
+    <div class="relative cursor-crosshair h-[320px]">
+      <div
+        class="absolute inset-0 rounded-xl shadow-md border dark:border-neutral-600 border-neutral-200"
+      >
+        <img
+          src={aboutBackground.src}
+          alt="Hero Background"
+          class="h-full w-full object-cover cursor-grab rounded-xl"
+        />
+
+        <div
+          class="absolute inset-0 rounded-xl dark:bg-black/40 bg-gradient-to-b from-blue-700/30 to-orange-700/40"
+        >
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-full px-4"
+      >
+        <h1
+          class="title text-6xl font-extrabold dark:text-neutral-100/80 text-neutral-100 mb-4"
+        >
+          About
+        </h1>
+        <h2
+          class="mb-8 text-3xl font-medium text-neutral-100 dark:text-neutral-100/80"
+        >
+          Creative Technologist
+        </h2>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="mb-10 flex justify-center gap-4">
+      <div
+        class="-rotate-2 rounded-lg border dark:grayscale dark:hover:filter-none border-gray-300 px-2 pb-2 pt-2 shadow-md transition-transform hover:rotate-2 dark:border-neutral-800 dark:bg-neutral-900"
+      >
+        <div
+          class="w-full max-w-52 max-h-52 h-full aspect-square sm:max-w-[13rem]"
+        >
+          <Image
+            class="h-full w-full object-cover cursor-grab rounded-sm dark:opacity-70 border dark:border-neutral-400"
+            src={backpack}
+            alt="Profile Image"
+          />
+        </div>
+      </div>
+      <div
+        class="rounded-lg border dark:grayscale dark:hover:filter-none border-gray-300 px-2 pb-2 pt-2 shadow-md transition-transform hover:-rotate-2 dark:border-neutral-800 dark:bg-neutral-900"
+      >
+        <div
+          class="w-full max-w-52 max-h-52 h-full aspect-square sm:max-w-[13rem]"
+        >
+          <Image
+            class="h-full w-full object-cover cursor-grab rounded-sm dark:opacity-70 border dark:border-neutral-400"
+            src={climbing}
+            alt="Profile Image"
+          />
+        </div>
+      </div>
+      <div
+        class="rotate-2 rounded-lg border dark:grayscale dark:hover:filter-none border-gray-300 px-2 pb-2 pt-2 shadow-md transition-transform hover:-rotate-2 dark:border-neutral-800 dark:bg-neutral-900"
+      >
+        <div
+          class="w-full max-w-52 max-h-52 h-full aspect-square sm:max-w-[13rem]"
+        >
+          <Image
+            class="h-full w-full object-cover cursor-grab rounded-sm dark:opacity-70 border dark:border-neutral-400"
+            src={toastie}
+            alt="Profile Image"
+          />
+        </div>
+      </div>
+    </div>
+    <p class="text">
+      A multi-disciplinary technologist specialising in scaling software
+      products and teams.
+    </p>
+    <p class="text">
+      I bring over a decade of experience leading high-growth software teams,
+      architecting scalable systems, and translating product ambiguity into
+      delivery momentum. I'm most effective in the 0→2→100 journey where
+      structure meets speed, and thrive when engineering, product, and business
+      outcomes converge. Known for staying calm under pressure, I create order
+      from chaos, lead with empathy, and scale systems and people without losing
+      traction on the ground. My strengths lie in building operating models,
+      shaping product strategy through a technical lens, and growing cultures
+      that win.
+    </p>
+  </section>
+  <section aria-label="Pulse" class="mb-2 mt-16 text">
+    <h2 class="title mb-4 text-xl">Career History</h2>
+    <ul class="space-y-4 sm:space-y-2">
+      <li class="flex flex-col gap-x-2 sm:flex-row">
+        <span class="min-w-[120px]">Senior Software Engineer:</span>
+        <span class="flex items-center gap-2">
+          <a class="cactus-link" href="https://covidence.org/">Covidence</a>
+          <Javascript class="h-5 w-5" name="simple-icons:javascript" />
+          <Typescript class="h-5 w-5" name="simple-icons:typescript" />
+          <React class="h-5 w-5" name="simple-icons:react" />
+          <Rubyonrails class="h-5 w-5" name="simple-icons:ruby-on-rails" />
+        </span>
+      </li>
+      <li class="flex flex-col gap-x-2 sm:flex-row">
+        <span class="min-w-[120px]">Product & Engineering Manager:</span>
+        <span class="flex items-center gap-2">
+          <a class="cactus-link" href="https://camplify.com/">Camplify</a>
+          <Javascript class="h-5 w-5" name="simple-icons:javascript" />
+          <Typescript class="h-5 w-5" name="simple-icons:typescript" />
+          <React class="h-5 w-5" name="simple-icons:react" />
+          <Rubyonrails class="h-5 w-5" name="simple-icons:ruby-on-rails" />
+        </span>
+      </li>
+      <li class="flex flex-col gap-x-2 sm:flex-row">
+        <span class="min-w-[120px]">Product & Engineering Lead:</span>
+        <span class="flex items-center gap-2">
+          <a class="cactus-link" href="https://betmakers.com/">Betmakers</a>
+          <Javascript class="h-5 w-5" name="simple-icons:javascript" />
+          <Typescript class="h-5 w-5" name="simple-icons:typescript" />
+          <React class="h-5 w-5" name="simple-icons:react" />
+          <Php class="h-5 w-5" name="simple-icons:php" />
+        </span>
+      </li>
+      <li class="flex flex-col gap-x-2 sm:flex-row">
+        <span class="min-w-[120px]">Senior Software Engineer:</span>
+        <span class="flex items-center gap-2">
+          <a class="cactus-link" href="https://mudbath.com.au/">Mudbath</a>
+          <Javascript class="h-5 w-5" name="simple-icons:javascript" />
+          <Typescript class="h-5 w-5" name="simple-icons:typescript" />
+          <React class="h-5 w-5" name="simple-icons:react" />
+          <Dotnet class="h-5 w-5" name="simple-icons:dot-net" />
+        </span>
+      </li>
+      <li class="flex flex-col gap-x-2 sm:flex-row">
+        <span class="min-w-[120px]">Growth Software Engineer:</span>
+        <span class="flex items-center gap-2">
+          <a class="cactus-link" href="https://hipagesgroup.com.au/">hipages</a>
+          <Javascript class="h-5 w-5" name="simple-icons:javascript" />
+          <Typescript class="h-5 w-5" name="simple-icons:typescript" />
+          <React class="h-5 w-5" name="simple-icons:react" />
+          <Php class="h-5 w-5" name="simple-icons:php" />
+        </span>
+      </li>
+      <li class="flex flex-col gap-x-2 sm:flex-row">
+        <span class="min-w-[120px]">Design Software Engineer:</span>
+        <span class="flex items-center gap-2">
+          <a class="cactus-link" href="https://digivizer.com/">Digivizer</a>
+          <Javascript class="h-5 w-5" name="simple-icons:javascript" />
+          <React class="h-5 w-5" name="simple-icons:react" />
+          <Rubyonrails class="h-5 w-5" name="simple-icons:ruby-on-rails" />
+        </span>
+      </li>
+      <li class="flex flex-col gap-x-2 sm:flex-row">
+        <span class="min-w-[120px]">Operations Manager:</span>
+        <span>
+          <a class="cactus-link" href="/about/">PickleHosting (EXIT)</a>
+        </span>
+      </li>
+    </ul>
+  </section>
 </PageLayout>
