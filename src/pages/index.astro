@@ -1,166 +1,405 @@
 ---
 import PageLayout from "@/layouts/Base";
 import profile from "../../public/profile.png";
-import heroBackground from "../../public/hero-bg.png";
 import camplifyLogo from "../../public/chl-logo.png";
 import betmakersLogo from "../../public/betmakers-logo.png";
 import hipagesLogo from "../../public/hipages-logo.png";
 import covidenceLogo from "../../public/covidence-logo.png";
 import digivizerLogo from "../../public/digivizer-logo.png";
-import { SOCIAL_LINKS } from "../data/constants";
+import allieLogo from "../../public/allie-logo.png";
+import stuartProfile from "../../public/stuart.avif";
+
+const logos = [
+  { src: hipagesLogo.src, alt: "hipages", invert: true },
+  { src: covidenceLogo.src, alt: "Covidence", invert: true },
+  { src: betmakersLogo.src, alt: "BetMakers", invert: true },
+  { src: camplifyLogo.src, alt: "Camplify", invert: true },
+  { src: digivizerLogo.src, alt: "Digivizer", invert: false },
+  { src: allieLogo.src, alt: "Digivizer", invert: true },
+];
+
+const testimonials = [
+  {
+    text: "Jayden stepped in to run an independent audit of growthbox's product and engineering practice for one of our clients. In a single call he absorbed the context, within days we received a razor-sharp report that spanned everything from front-end usability to infrastructure resilience and development workflow. What impressed me most was the breadth of his insight and the clarity of his recommendations. Jayden can toggle effortlessly between strategic business outcomes and deep technical detail, translating complex findings into plain-English actions the whole team can rally behind.",
+    image: stuartProfile,
+    name: "Stuart Wan",
+    title: "Founder, Growthbox",
+  },
+];
+
+const calendarLink = "https://calendar.app.google/vztyBAcNPxT1toUS8";
 ---
 
 <PageLayout
-  meta={{ title: "Jayden Harrod", description: "Product & Engineering" }}
+  meta={{
+    title: "Home",
+    description:
+      "Collaborative sprints that turn your business into a machine that runs without you.",
+  }}
 >
-  <section
-    class="relative -mt-6 overflow-hidden mx-auto text-center sm:pb-8 transition hover:filter-none dark:hover:grayscale-0 dark:grayscale"
-  >
-    <div class="relative cursor-crosshair h-[320px]">
+  <section id="hero" class="text-center">
+    <h1
+      class="text-4xl sm:text-5xl font-extrabold text-neutral-800 dark:text-neutral-400 mb-6 mt-4"
+    >
+      Scale without chaos.
+    </h1>
+    <p
+      class="max-w-lg mx-auto text-lg text-neutral-600 dark:text-neutral-400 mb-8"
+    >
+      Double your revenue without doubling your headcount — using the same
+      systems I used to grow from $0 to $50M ARR.
+    </p>
+
+    <a
+      href={calendarLink}
+      class="inline-block rounded-md px-6 py-3 font-semibold border-2 border-neutral-300 dark:border-neutral-500 text-neutral-700 dark:text-neutral-400 bg-white dark:bg-neutral-800 hover:underline mb-8"
+    >
+      Book An Intro Chat
+    </a>
+
+    <section id="positioning" class="px-0 sm:px-6 mt-12">
       <div
-        class="absolute inset-0 sm:rounded-xl rounded-none shadow-md border dark:border-neutral-600 border-neutral-200"
+        class="flex flex-col-reverse items-center text-center sm:text-left sm:items-start sm:flex-row gap-12 mb-12"
       >
         <img
-          src={heroBackground.src}
-          alt="Hero Background"
-          class="h-full w-full object-cover sm:rounded-xl rounded-none"
+          class="h-28 w-28 cursor-pointer dark:hover:grayscale-0 dark:grayscale -rotate-2 rounded-lg border-2 dark:opacity-75 border-neutral-200 p-2 shadow-lg transition-transform hover:-rotate-0 hover:scale-105 dark:border-neutral-800 dark:bg-neutral-900"
+          src={profile.src}
+          alt="Profile"
         />
-
-        <div
-          class="absolute inset-0 sm:rounded-xl rounded-none bg-neutral-900/30 bg-gradient-to-b from-blue-600/40 to-orange-800/50"
-        >
-        </div>
+        <p class="text-md max-w-md opacity-80 pt-1">
+          I help ambitious founder-led businesses who’ve nailed their
+          product-market fit but are stuck in operational bottlenecks. Together,
+          we install systems, automation, and processes so you can double
+          revenue without doubling headcount.
+        </p>
       </div>
+    </section>
 
-      <div
-        class="relative z-10 flex flex-col items-center justify-center h-full px-4"
-      >
-        <h1
-          class="title text-6xl shadow-sm font-extrabold dark:text-neutral-100/80 text-neutral-100 mb-4"
-        >
-          Jayden Harrod
-        </h1>
-        <h2
-          class="mb-8 text-3xl shadow-sm font-medium text-neutral-100 dark:text-neutral-100/80"
-        >
-          Building Great Products
-        </h2>
-      </div>
-    </div>
     <div
-      class="mt-16 mb-20 ml-2 mr-2 flex flex-wrap items-center justify-center gap-8"
+      class="mt-16 mb-20 w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
     >
-      <img
-        src={hipagesLogo.src}
-        alt="hipages"
-        class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
-      />
-      <img
-        src={covidenceLogo.src}
-        alt="Covidence"
-        class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
-      />
-      <img
-        src={betmakersLogo.src}
-        alt="BetMakers"
-        class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
-      />
-      <img
-        src={camplifyLogo.src}
-        alt="Camplify"
-        class="h-14 dark:grayscale dark:invert dark:opacity-25 opacity-90 dark:hover:opacity-30"
-      />
-      <img
-        src={digivizerLogo.src}
-        alt="Digivizer"
-        class="h-14 dark:grayscale dark:opacity-25 opacity-90 dark:hover:opacity-30"
-      />
+      <ul
+        class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+      >
+        {
+          logos.map((logo) => (
+            <li>
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                class:list={[
+                  "h-14 dark:grayscale dark:opacity-25 opacity-90 dark:hover:opacity-30",
+                  logo.invert && "dark:invert",
+                ]}
+              />
+            </li>
+          ))
+        }
+      </ul>
+      <ul
+        class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+        aria-hidden="true"
+      >
+        {
+          logos.map((logo) => (
+            <li>
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                class:list={[
+                  "h-14 dark:grayscale dark:opacity-25 opacity-90 dark:hover:opacity-30",
+                  logo.invert && "dark:invert",
+                ]}
+              />
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </section>
 
-  <section class="ml-4 mr-4 sm:ml-0 sm:mr-0">
-    <div
-      class="flex flex-col-reverse items-center text-center sm:text-left sm:items-start sm:flex-row gap-14"
+  <section id="pain" class="max-w-4xl mx-auto px-4 py-16 text-center">
+    <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-400 mb-6">
+      PMF isn't about "more hustle."
+    </h2>
+    <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-8">
+      It's about removing the constraints that keep you stuck in firefighting
+      mode.
+    </p>
+
+    <h3
+      class="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-4"
     >
-      <img
-        class="h-40 w-40 cursor-pointer dark:hover:grayscale-0 dark:grayscale -rotate-2 rounded-lg border-2 dark:opacity-75 border-neutral-200 p-2 shadow-lg transition-transform hover:-rotate-0 hover:scale-105 dark:border-neutral-800 dark:bg-neutral-900"
-        src={profile.src}
-        alt="Profile"
-      />
-      <p class="text opacity-80 pt-0 sm:pt-2">
-        Hey! I'm a technical operator who's helped scale multiple product
-        companies to $50M+ ARR from the ground up. I've operated during moments
-        of chaos, M&A, and rapid growth to deliver meaningful outcomes across
-        engineering, infrastructure, compliance, teams, and product.
-      </p>
+      Most founders at this stage:
+    </h3>
+    <ul class="space-y-4 text-neutral-600 dark:text-neutral-400">
+      <li class="flex items-center justify-center gap-2">
+        <span class="w-2 h-2 bg-neutral-400 rounded-full"></span>
+        Are the bottleneck for sales, delivery, and decision-making.
+      </li>
+      <li class="flex items-center justify-center gap-2">
+        <span class="w-2 h-2 bg-neutral-400 rounded-full"></span>
+        Run on fragile, undocumented processes that break under growth.
+      </li>
+      <li class="flex items-center justify-center gap-2">
+        <span class="w-2 h-2 bg-neutral-400 rounded-full"></span>
+        Add people instead of leverage — and watch margins disappear.
+      </li>
+    </ul>
+  </section>
+
+  <section
+    id="transformation"
+    class="max-w-4xl mx-auto px-4 py-16 text-center rounded-lg bg-neutral-100 border-2 dark:border-neutral-700 dark:bg-neutral-900"
+  >
+    <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-400 mb-6">
+      Imagine your business as a machine:
+    </h2>
+    <ul class="space-y-4 text-neutral-600 dark:text-neutral-400">
+      <li class="flex items-center justify-center gap-2">
+        <span class="w-2 h-2 bg-neutral-400 rounded-full"></span>
+        Sales, delivery, and admin run without constant oversight.
+      </li>
+      <li class="flex items-center justify-center gap-2">
+        <span class="w-2 h-2 bg-neutral-400 rounded-full"></span>
+        Processes are documented, automated, and predictable.
+      </li>
+      <li class="flex items-center justify-center gap-2">
+        <span class="w-2 h-2 bg-neutral-400 rounded-full"></span>
+        You finally have the freedom to focus on growth — or take a week off.
+      </li>
+    </ul>
+    <p
+      class="text-lg font-semibold text-neutral-700 dark:text-neutral-400 mt-8"
+    >
+      This is what "scale without chaos" looks like.
+    </p>
+  </section>
+
+  <section id="method" class="max-w-4xl mx-auto px-4 py-16 text-center">
+    <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-400 mb-6">
+      The Method
+    </h2>
+    <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-8">
+      I don't sell theory. I've been in your shoes.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8 mt-12">
+      <div
+        class="p-6 rounded-lg border-2 bg-white dark:bg-black border-neutral-200 dark:border-neutral-800"
+      >
+        <h3
+          class="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-4"
+        >
+          Onboarding Sprint
+        </h3>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          Deep dive into your systems, people, and bottlenecks.
+        </p>
+      </div>
+      <div
+        class="p-6 rounded-lg border-2 bg-white dark:bg-black border-neutral-200 dark:border-neutral-800"
+      >
+        <h3
+          class="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-4"
+        >
+          Implementation Sprint
+        </h3>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          Build high-leverage processes and automations.
+        </p>
+      </div>
+      <div
+        class="p-6 rounded-lg border-2 bg-white dark:bg-black border-neutral-200 dark:border-neutral-800"
+      >
+        <h3
+          class="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-4"
+        >
+          Utilise As Required
+        </h3>
+        <p class="text-neutral-600 dark:text-neutral-400">
+          Re-engage as required when new bottlenecks arise.
+        </p>
+      </div>
     </div>
   </section>
 
   <section
-    class="mt-20 grid grid-cols-1 gap-4 sm:gap-12 md:grid-cols-2 ml-4 mr-4 sm:ml-0 sm:mr-0"
+    id="who-its-for"
+    class="max-w-4xl mx-auto px-4 py-20 text-center rounded-lg"
   >
-    <div
-      class="sm:rounded-xl rounded-none border bg-white dark:bg-neutral-900 border-neutral-200 p-8 dark:border-neutral-800"
-    >
-      <h2 class="mb-4 text font-bold text-neutral-900 dark:text-neutral-400">
-        Looking for a builder?
-      </h2>
-      <p class="mb-6 text opacity-70 dark:text-neutral-500">
-        I partner with founders to turn chaos into clarity by owning the
-        tech/product stack so you can focus on vision and growth.
-      </p>
-      <a
-        href={SOCIAL_LINKS.linkedin}
-        class="inline-flex items-center mt-auto text-neutral-600 dark:text-neutral-400 hover:underline"
-      >
-        Hire Me
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-4 w-4 ml-1"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-        </svg>
-      </a>
-    </div>
+    <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-400 mb-8">
+      Who This Is For
+    </h2>
 
-    <div
-      class="sm:rounded-xl rounded-none border bg-white dark:bg-neutral-900 border-neutral-200 p-8 dark:border-neutral-800"
+    <p
+      class="text-lg text-neutral-600 dark:text-neutral-400 mb-16 max-w-2xl mx-auto"
     >
-      <h2 class="mb-4 text font-bold text-neutral-900 dark:text-neutral-400">
-        Looking to invest?
-      </h2>
-      <p class="mb-6 text opacity-70 dark:text-neutral-500">
-        I've run every part of the machine: engineering, product, support, ops.
-        I build quietly, ship deliberately, and scale fast.
-      </p>
-      <div class="space-x-4">
-        <a
-          href={SOCIAL_LINKS.linkedin}
-          class="inline-flex items-center mt-auto text-neutral-600 dark:text-neutral-400 hover:underline"
+      My systems work best for businesses at a specific stage. <br />
+      Here's how to know if we're the right fit:
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <div
+        class="bg-white dark:bg-black p-8 rounded-xl border-2 border-neutral-200 dark:border-neutral-800"
+      >
+        <h3
+          class="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-8 flex items-center justify-center gap-2"
         >
-          Get in Touch
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 ml-1"
+            class="w-6 h-6 text-green-500"
             fill="none"
-            viewBox="0 0 24 24"
             stroke="currentColor"
+            viewBox="0 0 24 24"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-        </a>
+          Perfect If:
+        </h3>
+        <ul class="space-y-6 text-neutral-600 dark:text-neutral-400">
+          <li class="flex items-center gap-3">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center"
+            >
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            </span>
+            <span class="text-left"
+              >Run a founder-led business between $500K and $5M in revenue</span
+            >
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center"
+            >
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            </span>
+            <span class="text-left"
+              >Have product-market fit but can't scale without breaking things</span
+            >
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center"
+            >
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            </span>
+            <span class="text-left"
+              >Value leverage, clarity, and efficiency over adding headcount</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-white dark:bg-black p-8 rounded-xl border-2 border-neutral-200 dark:border-neutral-800"
+      >
+        <h3
+          class="text-xl font-semibold text-neutral-700 dark:text-neutral-400 mb-8 flex items-center justify-center gap-2"
+        >
+          <svg
+            class="w-6 h-6 text-red-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+          Not A Fit:
+        </h3>
+        <ul class="space-y-6 text-neutral-600 dark:text-neutral-400">
+          <li class="flex items-center gap-3">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900 flex items-center justify-center"
+            >
+              <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+            </span>
+            <span class="text-left"
+              >Still testing product-market fit or haven't validated your offer</span
+            >
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900 flex items-center justify-center"
+            >
+              <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+            </span>
+            <span class="text-left"
+              >Looking for a quick fix without committing to systematic change</span
+            >
+          </li>
+          <li class="flex items-center gap-3">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 dark:bg-red-900 flex items-center justify-center"
+            >
+              <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+            </span>
+            <span class="text-left"
+              >Not ready to invest in long-term operational excellence</span
+            >
+          </li>
+        </ul>
       </div>
     </div>
+  </section>
+
+  <section id="proof" class="max-w-4xl mx-auto px-4 py-16">
+    <h2
+      class="text-3xl font-bold text-neutral-800 dark:text-neutral-400 mb-12 text-center"
+    >
+      What Others Say
+    </h2>
+
+    <div class="grid md:grid-cols-1 gap-12">
+      {
+        testimonials.map((testimonial) => (
+          <div class="flex flex-col items-center text-center">
+            <img
+              src={testimonial.image.src}
+              alt={testimonial.name}
+              class="w-24 h-24 rounded-full mb-4 object-cover dark:hover:grayscale-0 dark:grayscale "
+            />
+            <blockquote class="text-neutral-600 dark:text-neutral-400 mb-4">
+              {testimonial.text}
+            </blockquote>
+            <cite class="not-italic">
+              <div class="font-semibold text-neutral-800 dark:text-neutral-400">
+                {testimonial.name}
+              </div>
+              <div class="text-neutral-600 dark:text-neutral-500">
+                {testimonial.title}
+              </div>
+            </cite>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="cta" class="max-w-4xl mx-auto px-4 py-48 text-center">
+    <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-400 mb-6">
+      Ready to turn your business into a machine?
+    </h2>
+    <p class="text-lg text-neutral-600 dark:text-neutral-400 mb-8">
+      Let's start with an Onboarding Sprint and find your fastest path to scale.
+    </p>
+
+    <a
+      href={calendarLink}
+      class="inline-block rounded-md px-8 py-4 font-semibold border-2 border-neutral-300 dark:border-neutral-500 text-neutral-700 dark:text-neutral-400 bg-white dark:bg-neutral-800 hover:underline mb-4"
+    >
+      Book Your Sprint
+    </a>
+    <p class="text-sm text-neutral-500 dark:text-neutral-500">
+      Limited Avaliability.
+    </p>
   </section>
 </PageLayout>
