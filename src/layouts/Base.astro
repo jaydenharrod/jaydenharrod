@@ -27,15 +27,26 @@ const {
     />
     <ViewTransitions />
   </head>
-  <body
-    class="bg-white dark:bg-neutral-950 bg-[size:40px_40px] [background-image:linear-gradient(to_right,rgb(229_231_235/_0.3)_1px,transparent_1px),linear-gradient(to_bottom,rgb(229_231_235/_0.3)_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,rgb(255_255_255/_0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/_0.02)_1px,transparent_1px)]"
-  >
-    <ThemeProvider />
-    <SkipLink />
-    <Header />
-    <main id="main">
-      <slot />
-    </main>
-    <Footer />
-  </body><!-- class="pb-18 flex-20 rounded-xl bg-white p-6 shadow-sm dark:bg-neutral-900" -->
+  <body>
+    <div class="min-h-screen w-full relative">
+      <div
+        class:list={[
+          "absolute inset-0 z-0",
+          "[background-image:linear-gradient(to_right,rgb(226_232_240/_20)_1px,transparent_1px),linear-gradient(to_bottom,rgb(226_232_240/_0.2)_1px,transparent_1px)]",
+          "dark:[background-image:linear-gradient(to_right,rgb(51_65_85/_0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgb(51_65_85/_0.2)_1px,transparent_1px)]",
+          "[background-size:20px_30px]",
+          "[mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_60%,transparent_100%)]",
+          "[-webkit-mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_60%,transparent_100%)]",
+        ]}
+      >
+      </div>
+      <ThemeProvider />
+      <SkipLink />
+      <Header />
+      <main id="main" class="relative">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
 </html>

@@ -51,7 +51,9 @@ import aboutBackground from "../../public/about-bg.png";
       </div>
     </div>
   </section>
-  <section class="mt-6 sm:mt-0 ml-4 mr-4 sm:ml-0 sm:mr-0">
+  <section
+    class="max-w-4xl mx-auto px-4 py-4 rounded-lg bg-neutral-100 border-2 dark:border-neutral-700 dark:bg-neutral-900"
+  >
     <h2 class="title mb-4 text-xl dark:text-neutral-300">About Jayden</h2>
     <p class="text">
       I'm an Australian based technologist with a 10 year of experience in
@@ -62,8 +64,6 @@ import aboutBackground from "../../public/about-bg.png";
       <br />
       In my spare time, I respond to emergencies and fly drones commerically.
     </p>
-  </section>
-  <section class="mt-6 sm:mt-0 ml-4 mr-4 sm:ml-0 sm:mr-0">
     <h3 class="title mb-4 text-xl dark:text-neutral-300">Career History</h3>
     <ul class="space-y-4 sm:space-y-2">
       <li class="flex flex-col gap-x-2 sm:flex-row">
@@ -166,46 +166,46 @@ import aboutBackground from "../../public/about-bg.png";
         </span>
       </li>
     </ul>
-    <div class="mt-12 pb-12 flex justify-center gap-4">
+  </section>
+  <div class="mt-12 pb-12 flex justify-center gap-4">
+    <div
+      class="-rotate-2 rounded-lg border dark:grayscale dark:hover:filter-none border-gray-300 px-2 pb-2 pt-2 shadow-md transition-transform hover:rotate-2 dark:border-neutral-800 dark:bg-neutral-900"
+    >
       <div
-        class="-rotate-2 rounded-lg border dark:grayscale dark:hover:filter-none border-gray-300 px-2 pb-2 pt-2 shadow-md transition-transform hover:rotate-2 dark:border-neutral-800 dark:bg-neutral-900"
+        class="w-full max-w-52 max-h-52 h-full aspect-square sm:max-w-[13rem]"
       >
-        <div
-          class="w-full max-w-52 max-h-52 h-full aspect-square sm:max-w-[13rem]"
-        >
-          <Image
-            class="h-full w-full object-cover cursor-grab rounded-sm dark:opacity-70 border dark:border-neutral-400"
-            src={backpack}
-            alt="Profile Image"
-          />
-        </div>
-      </div>
-      <div
-        class="rounded-lg border dark:grayscale dark:hover:filter-none border-gray-300 px-2 pb-2 pt-2 shadow-md transition-transform hover:-rotate-2 dark:border-neutral-800 dark:bg-neutral-900"
-      >
-        <div
-          class="w-full max-w-52 max-h-52 h-full aspect-square sm:max-w-[13rem]"
-        >
-          <Image
-            class="h-full w-full object-cover cursor-grab rounded-sm dark:opacity-70 border dark:border-neutral-400"
-            src={climbing}
-            alt="Profile Image"
-          />
-        </div>
-      </div>
-      <div
-        class="rotate-2 rounded-lg border dark:grayscale dark:hover:filter-none border-gray-300 px-2 pb-2 pt-2 shadow-md transition-transform hover:-rotate-2 dark:border-neutral-800 dark:bg-neutral-900"
-      >
-        <div
-          class="w-full max-w-52 max-h-52 h-full aspect-square sm:max-w-[13rem]"
-        >
-          <Image
-            class="h-full w-full object-cover cursor-grab rounded-sm dark:opacity-70 border dark:border-neutral-400"
-            src={toastie}
-            alt="Profile Image"
-          />
-        </div>
+        <Image
+          class="h-full w-full object-cover cursor-grab rounded-sm dark:opacity-70 border dark:border-neutral-400"
+          src={backpack}
+          alt="Profile Image"
+        />
       </div>
     </div>
-  </section>
+    <div
+      class="rounded-lg border dark:grayscale dark:hover:filter-none border-gray-300 px-2 pb-2 pt-2 shadow-md transition-transform hover:-rotate-2 dark:border-neutral-800 dark:bg-neutral-900"
+    >
+      <div
+        class="w-full max-w-52 max-h-52 h-full aspect-square sm:max-w-[13rem]"
+      >
+        <Image
+          class="h-full w-full object-cover cursor-grab rounded-sm dark:opacity-70 border dark:border-neutral-400"
+          src={climbing}
+          alt="Profile Image"
+        />
+      </div>
+    </div>
+    <div
+      class="rotate-2 rounded-lg border dark:grayscale dark:hover:filter-none border-gray-300 px-2 pb-2 pt-2 shadow-md transition-transform hover:-rotate-2 dark:border-neutral-800 dark:bg-neutral-900"
+    >
+      <div
+        class="w-full max-w-52 max-h-52 h-full aspect-square sm:max-w-[13rem]"
+      >
+        <Image
+          class="h-full w-full object-cover cursor-grab rounded-sm dark:opacity-70 border dark:border-neutral-400"
+          src={toastie}
+          alt="Profile Image"
+        />
+      </div>
+    </div>
+  </div>
 </PageLayout>
