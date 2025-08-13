@@ -32,7 +32,7 @@ const {
       <div
         class:list={[
           "absolute inset-0 z-0",
-          "[background-image:linear-gradient(to_right,rgb(226_232_240/_20)_1px,transparent_1px),linear-gradient(to_bottom,rgb(226_232_240/_0.2)_1px,transparent_1px)]",
+          "[background-image:linear-gradient(to_right,rgb(226_232_240/_20)_1px,transparent_1px),linear-gradient(to_bottom,rgb(226_232_240/_20)_1px,transparent_1px)]",
           "dark:[background-image:linear-gradient(to_right,rgb(51_65_85/_0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgb(51_65_85/_0.2)_1px,transparent_1px)]",
           "[background-size:20px_30px]",
           "[mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_60%,transparent_100%)]",
@@ -43,7 +43,7 @@ const {
       <ThemeProvider />
       <SkipLink />
       <Header />
-      <main id="main" class="relative">
+      <main id="main" class="relative px-4 sm:0">
         <slot />
       </main>
       <Footer />
